@@ -1,0 +1,44 @@
+{   
+    "Dags_Id": ["Covid-19_Analysis_mysql_db", "Covid-19_Patient_Status_postgresql", "Covid-19_Analysis_S3URL"],
+    "Schedule_time": ["11 5 * * *", "13 5 * * *", "15 5 * * *"],
+    "Instance_Type": ["t3.xlarge","t2.xlarge", "t2.xlarge"],
+    "Username": ["Vamsi Muramreddy", "Vamsi Muramreddy", "Vamsi Muramreddy"],
+    "Project_Name": ["Covid-19_Analysis_MYSQL", "Covid-19_Patient_Status_POSTGRES", "Covid-19_Patient_Status_S3"],
+    "model_link": ["http://54.84.62.198:9000/mlflow/0/894e256eb9da400abeb9125727f9f3a0/artifacts/RandomForestClassifier%28%29/model.pkl?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3YG72WSKDDWFQLEM%2F20230706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230706T072942Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=411df8da386645c2b297fc16ff640864827bb1b367958bb1f9d7f715b6cd5966", 
+                    "http://54.84.62.198:9000/mlflow/0/894e256eb9da400abeb9125727f9f3a0/artifacts/RandomForestClassifier%28%29/model.pkl?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3YG72WSKDDWFQLEM%2F20230706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230706T072942Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=411df8da386645c2b297fc16ff640864827bb1b367958bb1f9d7f715b6cd5966",
+                    "http://54.84.62.198:9000/mlflow/0/894e256eb9da400abeb9125727f9f3a0/artifacts/RandomForestClassifier%28%29/model.pkl?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3YG72WSKDDWFQLEM%2F20230706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230706T072942Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=411df8da386645c2b297fc16ff640864827bb1b367958bb1f9d7f715b6cd5966"
+                  ],
+    "mlangles_s3_bucketname": "sagemaker-vamsi",
+    "type_of_source":[{"s3":{ "AWS_ACCESS_KEY_ID": "AKIA3YG72WSKDDWFQLEM",
+                              "AWS_SECRET_ACCESS_KEY": "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",
+                              "Bucket_Name": "sagemaker-covid19",
+                              "Object_Path": "predictions.csv"
+                              }
+                          },
+                      {"mysql_db": { "mysql_hostname": "52.55.61.135",
+                                    "mysql_username": "mladmin",
+                                    "mysql_password": "mlangles",
+                                    "mysql_databasename": "airflow_db_test",
+                                    "mysql_database_tablename": "prediction_data"      
+                                  }
+                      },
+                  
+                    {"postgres_db": { "postgres_db_hostname": "52.55.61.135",
+                                      "postgres_db_username": "postgres",
+                                      "postgres_db_password": "mlangles",
+                                      "postgres_db_databasename": "airflow_db",
+                                      "postgres_db_tablename": "prediction_data"
+                                    }
+                     },
+
+                     { "DataURL": { "dataurl": "https://sagemaker-covid19.s3.amazonaws.com/predictions.csv",
+                                    "destination_type": "s3",
+                                    "AWS_ACCESS_KEY_ID": "AKIA3YG72WSKDDWFQLEM",
+                                    "AWS_SECRET_ACCESS_KEY": "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",
+                                    "Bucket_Name": "sagemaker-covid19"
+                                  }
+                    }
+]
+  }
+
+  

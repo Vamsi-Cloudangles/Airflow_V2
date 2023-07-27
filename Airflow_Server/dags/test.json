@@ -1,0 +1,28 @@
+{   
+    "Dags_Id": ["Covid-19_Analysis_DataURL", "Covid-19_Analysis_mysql_db"],
+    "Schedule_time": ["17 12 * * *", "19 12 * * * "],
+    "Instance_Type": ["t2.xlarge", "t2.xlarge"],
+    "Username": ["Vamsi Muramreddy", "Vamsi Muramreddy"],
+    "Project_Name": ["Covid-19_Patient_Status_URL", "Covid-19_Patient_Status_sql"],
+    "model_link": [ "http://54.84.62.198:9000/mlflow/0/894e256eb9da400abeb9125727f9f3a0/artifacts/RandomForestClassifier%28%29/model.pkl?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3YG72WSKDDWFQLEM%2F20230726%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230726T104437Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=0a3628ea950f5546f8f3812ca4afeba77323197ca32faaf38eb87efa38cb0e3a",
+                    "http://54.84.62.198:9000/mlflow/0/894e256eb9da400abeb9125727f9f3a0/artifacts/RandomForestClassifier%28%29/model.pkl?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3YG72WSKDDWFQLEM%2F20230726%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230726T104437Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=0a3628ea950f5546f8f3812ca4afeba77323197ca32faaf38eb87efa38cb0e3a"
+                   ],
+    "type_of_source":[
+                    {
+                      "DataURL":{ "dataurl": "https://sagemaker-covid19.s3.amazonaws.com/predictions.csv",
+                                  "destination_type": "s3",
+                                  "AWS_ACCESS_KEY_ID": "AKIA3YG72WSKDDWFQLEM",
+                                  "AWS_SECRET_ACCESS_KEY": "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",
+                                  "Bucket_Name": "sagemaker-covid19"
+                                } 
+                    },
+                    {"mysql_db": { "mysql_hostname": "52.55.61.135",
+                                    "mysql_username": "mladmin",
+                                    "mysql_password": "mlangles",
+                                    "mysql_databasename": "airflow_db_test",
+                                    "mysql_database_tablename": "prediction_data"      
+                                  }
+                      }
+                    ]
+  }
+  
